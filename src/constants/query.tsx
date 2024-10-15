@@ -1,0 +1,1 @@
+export const SLATE_TIME_QUERY = 60 * 1000;

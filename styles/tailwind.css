@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-show {
+  animation: menu-active 0.4s ease-in-out forwards;
+}
+
+.menu-hidden {
+  animation: menu-inactive 0.4s ease-in-out forwards;
+}
+
+.chevron-enable {
+  animation: chevron-up 0.3s ease-in-out forwards;
+}
+
+.chevron-disable {
+  animation: chevron-down 0.3s ease-in-out forwards;
+}
+
+@keyframes menu-active {
+  0% {
+    transform: translateY(140px);
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes menu-inactive {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(140px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+}
+
+@keyframes chevron-up {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes chevron-down {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.my_slider {
+  z-index: 1;
+}
+
+#frame {
+  -ms-zoom: 2;
+}
